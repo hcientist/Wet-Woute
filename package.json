@@ -37,6 +37,7 @@
     "test": "grunt test"
   },
   "dependencies": {
+    "express": "^4.13.3",
     "forecast.io-bluebird": "0.0.1"
   }
 }
