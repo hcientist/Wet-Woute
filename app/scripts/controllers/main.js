@@ -33,11 +33,19 @@ angular.module('wetWouteApp')
     };
 
     $scope.open = function (evt) {
-      console.log('open the thing');
       $scope.datePicker.status.opened = true;
     };
 
+    $scope.originValid = function () {
+      return $scope.origin && $scope.origin.length > 0;
+    };
+
+    $scope.destinationValid = function () {
+      return $scope.destination && $scope.destination.length > 0;
+    };
+
     $scope.routeIt = function () {
+      console.log('this is where we"ll ask our server for directions');
       // according to https://github.com/angular-ui/angular-google-maps/issues/578 
       // if we want to use that package, which otherwise looks very good, we
       // would need to do directions completely separately
